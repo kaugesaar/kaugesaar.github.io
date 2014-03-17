@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8">
+    <title>&pws=0 SEO Verktyg av Kaugesaar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ett verktyg för dig som på ett enkelt sätt vill göra googlesökningar med &pws=0.">
+    <!-- Le styles -->
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+        background: url('./img/bg.jpg') fixed;
+        background-size: cover;
+        color: #fff;
+      }
+      .container-two {
+        margin: -40px auto;
+        margin-bottom: 40px;
+        max-width: 700px;
+        padding: 10px;
+        background-color:rgba(250,250,250,0.9);
+        color:#000;
+        border-radius: 0px;
+        border: 0px;
+      }
+
+      .container-fixed {
+        margin: 100px auto;
+        max-width: 700px;
+        padding: 10px;
+        background-color:rgba(0,0,0,0.5);
+      }
+
+      .fixpos {
+        margin: 7px 15px 10px 0px;
+        float: left;
+      }
+    </style>
+    <link href="./css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#search").click(function () {
+          var k = $("#keyword").val();
+          var l = $("#lang").val();
+
+          if (/^\s*$/.test(k)){
+            alert("Du måste ange ett sökord!");
+
+          } else {
+
+            if(l=="se"){
+              window.open("http://www.google.se/search?pws=0&q=" + k + "&hl=" + l);
+            }
+
+            if(l=="fi"){
+              window.open("http://www.google.fi/search?pws=0&q=" + k + "&hl=" + l);
+            }
+
+            if(l=="da"){
+              window.open("http://www.google.dk/search?pws=0&q=" + k + "&hl=" + l);
+            }
+
+            if(l=="no"){
+              window.open("http://www.google.no/search?pws=0&q=" + k + "&hl=" + l);
+            }
+
+            if(l=="de"){
+              window.open("http://www.google.de/search?pws=0&q=" + k + "&hl=" + l);
+            }
+
+            if(l=="en"){
+              window.open("http://www.google.com/search?pws=0&q=" + k + "&hl=" + l);
+            }
+
+            if(l=="gb"){
+              window.open("http://www.google.co.uk/search?pws=0&q=" + k + "&hl=en");
+            }
+          }
+        });
+      });
+
+    </script>
+  </head>
+<body>
+  <div class="container-fixed">
+    <div class="masthead">
+      <h1>ochpws.se</h1>
+      <p class="lead">Gör googlesökning med &pws OCH &hl (en liten bonus) smidigt och enkelt!</p>
+      <div class="fixpos">
+      <input name="keyword" id="keyword" type="text" placeholder="Sökord...">
+      <select id="lang">
+        <option value="se">Schweden</option>
+        <option value="fi">Finlande</option>
+        <option value="no">Norvegia</option>
+        <option value="da">Dinamarca</option>
+        <option value="de">Deutschland</option>
+        <option value="en">Amérique</option>
+        <option value="gb">Reino Unido</option>
+      </select>
+      </div>
+      <a class="btn btn-large btn-primary" id="search" href="" onclick="return false;">SÖÖÖÖÖÖÖÖÖÖÖK!</a>
+    </div>
+  </div>
+<script src="./js/bootstrap.min.js"></script>
+</body>
+</html>
