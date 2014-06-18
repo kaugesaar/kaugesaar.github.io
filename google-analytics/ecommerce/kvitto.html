@@ -83,25 +83,18 @@ jQuery(document).ready(function($) {
   if(typeof ga !== 'undefined'){
         try{
               ga('require', 'ecommerce', 'ecommerce.js');
-              ga('set', 'dimension1', 'Ridestore');
-              ga('ecommerce:addTransaction', {
-                'id': '12345-Two',                    // Transaction ID. Required.
-                'affiliation': 'Ridestore.se',    // The store or affiliation from which this transaction occurred (e.g. Acme Clothing).
-                'revenue': '600',               // Specifies the total revenue / grand total associated with the transaction. This value should include any shipping or tax costs
-                'tax': '120',                     // Specifies the total tax of the transaction.
-                'dimension1': 'Ridestore',
-                'currency': 'SEK'
-              });
-              ga('ecommerce:addItem', {
-                'id': '12345-Two',                     // Transaction ID. Required.
-                'name': 'T-shirt Dope',            // Product name. Required.
-                'sku': 'u3eqds43',                 // SKU/code.
-                'price': '300',                   // Unit price.
-                'quantity': '2',                   // Quantity.
-                'currency': 'SEK'
-              });
-          
-              ga('ecommerce:send');
+            ga('set', 'currencyCode', 'SEK');
+                        ga('set','dimension2', 'ridestore2');
+                        ga('ecommerce:addTransaction', {
+                'id': 'SE164289',
+                'affiliation': 'Svenska',
+                'revenue': '89.0000',
+                                'dimension2': 'ridestore2',
+                                'shipping': '0.0000',
+                'tax': '17.8000'});
+
+                                    ga('ecommerce:addItem', {"id":"SE164289","name":"Ridestore - Logo Sticker 10-Pack Dekalark White","sku":"Ri0004-277-000","price":"31.2000","quantity":1,"currency":"SEK","dimension1":"Ridestore"});
+                        ga('ecommerce:send');
         }
         catch(e){}
   }
