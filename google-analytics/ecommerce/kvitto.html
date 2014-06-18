@@ -60,8 +60,8 @@ jQuery(document).ready(function($) {
     _gaq.push(['_setAccount', 'UA-996099-1']);
     _gaq.push(['_trackPageview']);
     
-    _gaq.push(['_addTrans', 'SE164289-Victor-Testar-4', 'Ridestore', '89.0000', '17.8000', '0.0000', 'Göteborg', '', 'SE']);
-    _gaq.push(['_addItem', 'SE164289-Victor-Testar-4', 'Ri0004-277-000', 'Ridestore - Logo Sticker 10-Pack Dekalark White', '', '31.2000', '1.0000']);
+    _gaq.push(['_addTrans', 'SE164289-Victor-Testar-5', 'Ridestore', '89.0000', '17.8000', '0.0000', 'Göteborg', '', 'SE']);
+    _gaq.push(['_addItem', 'SE164289-Victor-Testar-5', 'Ri0004-277-000', 'Ridestore - Logo Sticker 10-Pack Dekalark White', '', '31.2000', '1.0000']);
     _gaq.push(['_trackTrans']);
     //]]>
 </script>
@@ -80,26 +80,31 @@ jQuery(document).ready(function($) {
   </script>
 
   <script>
-    ga('require', 'ecommerce', 'ecommerce.js');
-    ga('set', 'dimension1', 'Ridestore');
-    ga('ecommerce:addTransaction', {
-      'id': '12345',                    // Transaction ID. Required.
-      'affiliation': 'Ridestore.se',    // The store or affiliation from which this transaction occurred (e.g. Acme Clothing).
-      'revenue': '600',               // Specifies the total revenue / grand total associated with the transaction. This value should include any shipping or tax costs
-      'tax': '120',                     // Specifies the total tax of the transaction.
-      'dimension1': 'Ridestore',
-      'currency': 'SEK'
-    });
-    ga('ecommerce:addItem', {
-      'id': '12345',                     // Transaction ID. Required.
-      'name': 'T-shirt Dope',            // Product name. Required.
-      'sku': 'u3eqds43',                 // SKU/code.
-      'price': '300',                   // Unit price.
-      'quantity': '2',                   // Quantity.
-      'currency': 'SEK'
-    });
-
-    ga('ecommerce:send');
+  if(typeof ga !== 'undefined'){
+        try{
+              ga('require', 'ecommerce', 'ecommerce.js');
+              ga('set', 'dimension1', 'Ridestore');
+              ga('ecommerce:addTransaction', {
+                'id': '12345-Two',                    // Transaction ID. Required.
+                'affiliation': 'Ridestore.se',    // The store or affiliation from which this transaction occurred (e.g. Acme Clothing).
+                'revenue': '600',               // Specifies the total revenue / grand total associated with the transaction. This value should include any shipping or tax costs
+                'tax': '120',                     // Specifies the total tax of the transaction.
+                'dimension1': 'Ridestore',
+                'currency': 'SEK'
+              });
+              ga('ecommerce:addItem', {
+                'id': '12345-Two',                     // Transaction ID. Required.
+                'name': 'T-shirt Dope',            // Product name. Required.
+                'sku': 'u3eqds43',                 // SKU/code.
+                'price': '300',                   // Unit price.
+                'quantity': '2',                   // Quantity.
+                'currency': 'SEK'
+              });
+          
+              ga('ecommerce:send');
+        }
+        catch(e){}
+  }
   </script>
 
 </body>
