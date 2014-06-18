@@ -45,12 +45,12 @@
 
   <script>
     ga('require', 'ecommerce', 'ecommerce.js');
+    ga('set', 'dimension2', 'Ridestore');
     ga('ecommerce:addTransaction', {
       'id': '12345',                    // Transaction ID. Required.
       'affiliation': 'Ridestore.se',    // The store or affiliation from which this transaction occurred (e.g. Acme Clothing).
       'revenue': '600',               // Specifies the total revenue / grand total associated with the transaction. This value should include any shipping or tax costs
       'tax': '120',                     // Specifies the total tax of the transaction.
-      'dimension1': 'Ridestore',
       'currency': 'SEK'
     });
     ga('ecommerce:addItem', {
