@@ -38,6 +38,7 @@
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-50950314-1', 'kaugesaar.github.io');
+    ga('set', 'dimension1', 'Ridestore');
     ga('send', 'pageview');
     
 
@@ -51,6 +52,7 @@
       'affiliation': 'Ridestore.se',    // The store or affiliation from which this transaction occurred (e.g. Acme Clothing).
       'revenue': '600',               // Specifies the total revenue / grand total associated with the transaction. This value should include any shipping or tax costs
       'tax': '120',                     // Specifies the total tax of the transaction.
+      'dimension1': 'Ridestore',
       'currency': 'SEK'
     });
     ga('ecommerce:addItem', {
