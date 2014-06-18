@@ -5,6 +5,7 @@
   <title>Ember Starter Kit</title>
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-default" role="navigation">
@@ -32,7 +33,7 @@
     </nav>
 
 <script>
-
+jQuery(document).ready(function($) {
   var _gaq = _gaq || [];
   var AB_test_theme_name = "ridestore2";
 
@@ -43,7 +44,7 @@
     AB_test_theme_name, // The value of the custom variable. Required parameter.
     1 // Sets the scope to visitor-level. Optional parameter.
   ]);
-
+});
 </script>
     
   <script type="text/javascript">
