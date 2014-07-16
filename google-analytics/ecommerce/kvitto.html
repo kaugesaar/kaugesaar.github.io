@@ -5,7 +5,6 @@
   <title>Ember Starter Kit</title>
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-default" role="navigation">
@@ -32,40 +31,6 @@
       </div>
     </nav>
 
-<script>
-jQuery(document).ready(function($) {
-  var _gaq = _gaq || [];
-  var AB_test_theme_name = "ridestore2";
-
-  _gaq.push([
-    '_setCustomVar',
-    2, // This custom var is set to slot #2. Required parameter.
-    'Theme_AB_testing', // The name of the custom variable. Required parameter.
-    AB_test_theme_name, // The value of the custom variable. Required parameter.
-    1 // Sets the scope to visitor-level. Optional parameter.
-  ]);
-});
-</script>
-    
-  <script type="text/javascript">
-  //<![CDATA[
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
-    })();
-
-    var _gaq = _gaq || [];
-
-    _gaq.push(['_setAccount', 'UA-996099-1']);
-    _gaq.push(['_trackPageview']);
-    
-    _gaq.push(['_addTrans', 'SE164289-Victor-Testar-5', 'Ridestore', '89.0000', '17.8000', '0.0000', 'Göteborg', '', 'SE']);
-    _gaq.push(['_addItem', 'SE164289-Victor-Testar-5', 'Ri0004-277-000', 'Ridestore - Logo Sticker 10-Pack Dekalark White', '', '31.2000', '1.0000']);
-    _gaq.push(['_trackTrans']);
-    //]]>
-</script>
-
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -73,31 +38,50 @@ jQuery(document).ready(function($) {
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-50950314-1', 'kaugesaar.github.io');
-    ga('set', 'dimension1', 'Ridestore');
-    ga('send', 'pageview');
-    
-
   </script>
 
   <script>
-  if(typeof ga !== 'undefined'){
-        try{
-              ga('require', 'ecommerce', 'ecommerce.js');
-            ga('set', 'currencyCode', 'SEK');
-                        ga('set','dimension2', 'ridestore2');
-                        ga('ecommerce:addTransaction', {
-                'id': 'SE164289',
-                'affiliation': 'Svenska',
-                'revenue': '89.0000',
-                                'dimension2': 'ridestore2',
-                                'shipping': '0.0000',
-                'tax': '17.8000'});
+    ga('require', 'ec', 'ec.js');
+    ga('set', '&cu', 'SEK');
+    ga('ec:addProduct', {
+                    'id': 'B5773',
+                    'name': 'Fox - 360 KR A1 Forzaken Tröja MX Yellow',
+                    'category': 'Tröja MX',
+                    'brand': 'Fox',
+                    'variant': 'Yellow',
+                    'price': '549',
+                    'quantity': '1.0000'
+                });
+                            ga('ec:addProduct', {
+                    'id': 'Ri0004-001',
+                    'name': 'Ridestore - Logo Sticker 10-Pack Dekalark Black/White',
+                    'category': 'Klistermärkesark',
+                    'brand': 'Ridestore',
+                    'variant': 'Black/White',
+                    'price': '39',
+                    'quantity': '1.0000'
+                });
+                            ga('ec:addProduct', {
+                    'id': 'We0147-252',
+                    'name': 'WeSC - Rza Street Hörlurar White/ Blue',
+                    'category': 'Hörlurar',
+                    'brand': 'WeSC',
+                    'variant': 'White/ Blue',
+                    'price': '1449',
+                    'quantity': '1.0000'
+                });
+            
+            ga('ec:setAction', 'purchase', {
+                'id': 'SE129724',
+                'affiliation': 'Ridestore',
+                'revenue': '2087.0000',
+                'tax':'417.4000',
+                'shipping':'0.0000',
+                'coupon':'',
+                'option':'checkmo'
+            });
 
-                                    ga('ecommerce:addItem', {"id":"SE164289","name":"Ridestore - Logo Sticker 10-Pack Dekalark White","sku":"Ri0004-277-000","price":"31.2000","quantity":1,"currency":"SEK","dimension1":"Ridestore"});
-                        ga('ecommerce:send');
-        }
-        catch(e){}
-  }
+            ga('send', 'pageview');
   </script>
 
 </body>
