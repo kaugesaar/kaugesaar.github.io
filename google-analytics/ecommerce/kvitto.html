@@ -38,30 +38,50 @@
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-50950314-1', 'kaugesaar.github.io');
-    ga('send', 'pageview');
-
   </script>
 
   <script>
-    ga('require', 'ecommerce', 'ecommerce.js');
-    ga('set', 'dimension1', 'Ridestore');
-    ga('ecommerce:addTransaction', {
-      'id': '12345',                    // Transaction ID. Required.
-      'affiliation': 'Ridestore.se',    // The store or affiliation from which this transaction occurred (e.g. Acme Clothing).
-      'revenue': '600',               // Specifies the total revenue / grand total associated with the transaction. This value should include any shipping or tax costs
-      'tax': '120',                     // Specifies the total tax of the transaction.
-      'currency': 'SEK'
-    });
-    ga('ecommerce:addItem', {
-      'id': '12345',                     // Transaction ID. Required.
-      'name': 'T-shirt Dope',            // Product name. Required.
-      'sku': 'u3eqds43',                 // SKU/code.
-      'price': '300',                   // Unit price.
-      'quantity': '2',                   // Quantity.
-      'currency': 'SEK'
-    });
+    ga('require', 'ec', 'ec.js');
+    ga('set', '&cu', 'SEK');
+    ga('ec:addProduct', {
+                    'id': 'B5773',
+                    'name': 'Fox - 360 KR A1 Forzaken Tröja MX Yellow',
+                    'category': 'Tröja MX',
+                    'brand': 'Fox',
+                    'variant': 'Yellow',
+                    'price': '549',
+                    'quantity': '1.0000'
+                });
+                            ga('ec:addProduct', {
+                    'id': 'Ri0004-001',
+                    'name': 'Ridestore - Logo Sticker 10-Pack Dekalark Black/White',
+                    'category': 'Klistermärkesark',
+                    'brand': 'Ridestore',
+                    'variant': 'Black/White',
+                    'price': '39',
+                    'quantity': '1.0000'
+                });
+                            ga('ec:addProduct', {
+                    'id': 'We0147-252',
+                    'name': 'WeSC - Rza Street Hörlurar White/ Blue',
+                    'category': 'Hörlurar',
+                    'brand': 'WeSC',
+                    'variant': 'White/ Blue',
+                    'price': '1449',
+                    'quantity': '1.0000'
+                });
+            
+            ga('ec:setAction', 'purchase', {
+                'id': 'SE129724',
+                'affiliation': 'Ridestore',
+                'revenue': '2087.0000',
+                'tax':'417.4000',
+                'shipping':'0.0000',
+                'coupon':'',
+                'option':'checkmo'
+            });
 
-    ga('ecommerce:send');
+            ga('send', 'pageview');
   </script>
 
 </body>
