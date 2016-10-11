@@ -33,40 +33,75 @@
 
         <div class="container">
             <h1 class="title">Twitch chat preview</h1>
+            <div class="columns">
+                <div class="column is-one-third">
+                    <p class="control has-addons">
+                        <input class="input is-expanded" type="text" name="img" placeholder="http://i.imgur.com/FGIfnh7.png">
+                        <a class="button is-info" onClick="updateImg()">
+                        Update
+                        </a>
+                    </p>
+                </div>
+            </div>
             <hr>
             <div class="columns">
                 <div class="column dark-chat">
                     <div class="chat-message">
                         <span class="avatar r">
-                            <img src="http://i.imgur.com/whMQdqz.pngg">
+                            <img src="http://i.imgur.com/FGIfnh7.png">
                             Qzectbumo:
                         </span>
                         <span class="msg">
                              I had to go to the store FeelsBadMan
-                        </span>
+                        </spa>
                     </div>
                     <div class="chat-message">
                         <span class="avatar r">
-                            <img src="http://i.imgur.com/whMQdqz.png">
+                            <img src="http://i.imgur.com/FGIfnh7.png">
                             Qzectbumo:
                         </span>
                         <span class="msg">
                             I have a man cold FeelsBadMan :gun:
-                        </span>
+                        </spa>
                     </div>
                 </div>
                 <div class="column light-chat">
                     <div class="chat-message">
                         <span class="avatar r">
-                            <img src="http://i.imgur.com/whMQdqz.png">
+                            <img src="http://i.imgur.com/FGIfnh7.png">
                             Qzectbumo:
                         </span>
                         <span class="msg">
                              I had to go to the store FeelsBadMan
-                        </span>
+                        </spa>
                     </div>
                 </div>
             </div>
         </div>
+        <script>
+            function getURLParameter(name) {
+                return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+            }
+            var imgUrl = getURLParameter('img');
+
+            var images = document.getElementsByTagName('img');
+
+            var updateImg = function() {
+                imgUrl = document.getElementsByTagName('input')[0].value;
+                window.location = '?img=' + imgUrl;
+            }
+
+            var main = function() {
+                if(imgUrl != null) {
+                    for(var i = 0; i < images.length; i++) {
+                        images[i].src = imgUrl;
+                    }
+                    document.getElementsByTagName('input')[0].value = imgUrl;
+                }
+            }
+
+            main();
+
+        </script>
     </body>
 </html>
