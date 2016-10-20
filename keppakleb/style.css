@@ -1,0 +1,79 @@
+body {
+    background: #fff;
+}
+
+.bull-nav {
+        background-color: #232323;
+    border-bottom: 1px solid #1b1b1b;
+}
+
+.twitch-stats {
+    padding: 15px 0;
+    background: #d84a4a;
+    margin-bottom: 0px !important;
+    color: #fff;
+    background-image: -webkit-linear-gradient(309deg, #2196F3 0%, #ff3860 71%, #FF9800 100%);
+    background-image: linear-gradient(141deg, #2196F3 0%, #ff3860 71%, #FF9800 100%);
+}
+
+.twitch-stats .title {
+        color: #ffffff;
+}
+
+.about-dog {
+    background: #212121;
+}
+
+.about-dog .content {
+    color: #adadad;
+}
+
+.about-dog .title {
+    color: #fff;
+}
+.about-dog .subtitle {
+    color: #ddd;
+}
+
+.about-dog .content h1, 
+.about-dog .content h2, 
+.about-dog .content h3, 
+.about-dog .content h4, 
+.about-dog .content h5, 
+.about-dog .content h6 {
+    color: #ddd;
+}
+
+.shop-dog {
+    background: #181818;
+    padding: 110px 0;
+}
+
+.button.is-twitch {
+    background-color: #6441a4;
+    border-width: 0;
+    color: white;
+}
+
+.button.is-twitch:hover {
+    background-color: #7d5bbe;
+}
+
+.keppa-klub {
+    padding: 240px 20px;
+    background-image: -webkit-linear-gradient(309deg, #2196F3 0%, #ff3860 71%, #FF9800 100%);
+    background-image: linear-gradient(141deg, #2196F3 0%, #ff3860 71%, #FF9800 100%);
+    color: #fff !important;
+}
+
+.keppa-klub .column:first-child {
+    text-align: right;
+}
+
+.keppa-klub .title {
+    color: #fff;
+}
+
+.keppa-klub .subtitle {
+    color: #fff;
+}
