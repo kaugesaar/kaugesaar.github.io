@@ -3,15 +3,18 @@
   <title>Test</title>
   </head>
   <body>
-    <script>
-      var urlPath = window.location.hostname + window.location.pathname + window.location.search;
+    <script type="text/javascript">
+      var urlPath = encodeURI(window.location.hostname + window.location.pathname);
       var axel = Math.random() + "";
       var a = axel * 10000000000000;
       var ping = new Image();
-      var fls = 'https://5129016.fls.doubleclick.net/activityi;src=5129016;type=se-re0;cat=remar0;u6=' + urlPath + ';u7=[To airport];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?';
+      var fls = 'https://6074802.fls.doubleclick.net/activityi;src=6074802;type=globa0;cat=globa0;u1=' + urlPath + ';u2=[Logged in];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?';
       ping.src = fls;
     </script>
-    <h1>Hej DB</h1>
+    <noscript>
+      <iframe src="https://6074802.fls.doubleclick.net/activityi;src=6074802;type=globa0;cat=globa0;u1=coop.se/no-script-fls/;u2=[Logged in];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+    </noscript>
+    <h1>Hej DoubleClick</h1>
     <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
   </body>
   </html>
